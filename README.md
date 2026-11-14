@@ -9,7 +9,7 @@ A one-screen Flutter dashboard for current weather and a four-day forecast in fi
 3. Start your Pixel emulator in **Tools → Device Manager** and turn on its Wi-Fi.
 4. Open `lib/main.dart`, select your device, and press **Run**.
 
-## 30-second viva explanation
+## 30-second explanation
 
 > I selected Open-Meteo to build a weather dashboard. Each city has a latitude and longitude. Selecting Dhaka sends an HTTP GET request with Dhaka's coordinates. The API responds with JSON containing current conditions and a four-day forecast. I decode that into a Dart map. FutureBuilder displays loading, an error with retry, or the dashboard. The API's weather code selects an icon and condition label, and its day/night value controls the current-weather card.
 
