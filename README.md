@@ -35,9 +35,7 @@ A one-screen Flutter dashboard for current weather and a four-day forecast in fi
 - **How do I add another city?** Add its name, latitude and longitude to `cities`. The dropdown creates one item for each entry in that list.
 - **Does it need login or a database?** The public endpoint supplies the data directly. The current result is held in memory.
 
-## Viva demo
 
-Open Chattogram, switch to Dhaka, and show the change in the request coordinates and response values. Tap refresh and point out the API timestamp. Open-Meteo updates its data on its own schedule, so two requests close together can show the same timestamp and readings. If you want to show retry, disconnect the emulator, tap refresh, then reconnect and tap **Try again**.
 
 Run `flutter analyze` and `flutter test` to check the project. The widget test checks the GET request, loading, two different cities, an HTTP error and retry using controlled responses.
 
