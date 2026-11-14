@@ -23,18 +23,6 @@ A one-screen Flutter dashboard for current weather and a four-day forecast in fi
 | `pubspec.yaml` | Declares `http` for network requests and `url_launcher` for the attribution link. |
 | `android/app/src/main/AndroidManifest.xml` | Declares Android internet permission. |
 
-## Questions to practice
-
-- **What are GET and HTTP 200?** GET asks the server for data. HTTP 200 is the successful response this app expects. Other statuses or a 15-second timeout lead to the error card.
-- **What do `async`, `await`, and `Future` mean?** A future holds a result that arrives later. `async` lets the function use `await`, which waits for the response while Flutter can still render the UI.
-- **Why use `initState()`?** It starts the first request once. Flutter can call `build()` many times, so the request is stored as a field and passed to `FutureBuilder`.
-- **What is `Map<String, dynamic>`?** The JSON object's keys are strings, while its values can have different types, such as numbers, maps or lists.
-- **Why use a `StatefulWidget`?** The selected city and current request can change. `setState()` tells Flutter to rebuild when those values are replaced.
-- **What is `final (label, icon)`?** The weather-code function returns two values in a Dart record. This syntax assigns them to two variables.
-- **Why show loading on a city change?** It keeps the previous city's forecast from appearing under the new selection while the new request is in progress.
-- **How do I add another city?** Add its name, latitude and longitude to `cities`. The dropdown creates one item for each entry in that list.
-- **Does it need login or a database?** The public endpoint supplies the data directly. The current result is held in memory.
-
 
 
 Run `flutter analyze` and `flutter test` to check the project. The widget test checks the GET request, loading, two different cities, an HTTP error and retry using controlled responses.
